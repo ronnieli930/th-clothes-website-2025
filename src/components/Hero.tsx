@@ -2,29 +2,14 @@
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="w-full flex justify-center items-center">
       {/* Video Background */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/images/banner8.mp4" type="video/mp4" />
-        {/* Fallback for browsers that don't support video */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-700" />
+      <video className="w-[80%] object-cover" autoPlay loop muted>
+        <source
+          src="https://firebasestorage.googleapis.com/v0/b/th-clothes.firebasestorage.app/o/videos%2Fbanner8.mp4?alt=media&token=bb848f0b-44d5-47b0-8f41-f68b5519a909"
+          type="video/mp4"
+        />
       </video>
-
-      {/* Optional overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/20 bg-opacity-30" />
-
-      {/* Content overlay (optional) */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center text-white z-10">
-          {/* Add hero content here if needed */}
-        </div>
-      </div>
     </section>
   );
 }
